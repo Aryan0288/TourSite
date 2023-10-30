@@ -2,14 +2,14 @@ import React from "react";
 import Card from "./Card";
 const Tours=({tours,removeTour})=>{
     return(
-        <div>
+        <div className="flex items-center justify-center flex-col">
             <div>
-                <h2>Tour with Aryan</h2>
+                <h2 className="text-center text-4xl mt-5 font-bold">Tour with Aryan</h2>
             </div>
-            <div>
+            <div className="flex flex-wrap items-center justify-center max-w-[1300px] mx-auto">
                 {
                     tours.map((tour)=>{
-                        return <Card {...tour} removeTour={removeTour}></Card>
+                        return <Card key={tour.id} {...tour} removeTour={removeTour}></Card>
                     })
                 }
             </div>
