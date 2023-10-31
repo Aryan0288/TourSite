@@ -9,14 +9,14 @@ export default function Card({ id, image, name, info, price,removeTour }) {
         setReadmore(!readmore);
     }
     return (
-        <div className='rounded-md p-[1rem] m-[1rem] flex items-center flex-col gap-3 w-[25rem] h-max  shadow-[0px_3px_8px_rgba(0,0,0,0.24)] text-[17px]'>
+        <div className='rounded-md p-[1rem] m-[1rem]  flex items-center flex-col gap-3 w-[25rem] shadow-[0px_3px_8px_rgba(0,0,0,0.24)] text-[17px]'>
             <img src={image} alt="" className='w-[23rem] bg-cover aspect-square' />
             <div>
                 <div>
                     <h4 className='text-green-600 font-bold'>&#8377; {price}</h4>
                     <h4 className='font-bold'>{name}</h4>
                 </div>
-                <div className='text-justify '>
+                <div className='text-justify'>
                     {description}
                     <span onClick={readmoreHandler} className='cursor-pointer text-[#12b0e8]'>
                         {readmore ? `show less` : `read more`}
